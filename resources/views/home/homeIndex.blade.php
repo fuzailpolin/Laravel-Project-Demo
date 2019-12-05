@@ -3,7 +3,20 @@
 
   <div class="container-fluid" data-aos="fade" data-aos-delay="500">
     <div class="swiper-container images-carousel">
+	
+		
         <div class="swiper-wrapper">
+		
+			<div class="swiper-slide">
+              <div class="image-wrap">
+                <div class="image-info">
+                  <h2 class="mb-3">Vehicles</h2>
+                  <a href="{{route('home.gallary')}}" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                </div>
+                <img src="{{asset('home_asset/images/img_9.jpg')}}" alt="Image">
+              </div>
+			</div>
+		
             <div class="swiper-slide">
               <div class="image-wrap">
                 <div class="image-info">
@@ -13,6 +26,7 @@
                 <img src="{{asset('home_asset/images/img_1.jpg')}}" alt="Image">
               </div>
             </div>
+			
             <div class="swiper-slide">
               <div class="image-wrap">
                 <div class="image-info">
@@ -22,6 +36,7 @@
                 <img src="{{asset('home_asset/images/img_2.jpg')}}" alt="Image">
               </div>
             </div>
+			
             <div class="swiper-slide">
               <div class="image-wrap">
                 <div class="image-info">
@@ -31,6 +46,7 @@
                 <img src="{{asset('home_asset/images/img_3.jpg')}}" alt="Image">
               </div>
             </div>
+			
             <div class="swiper-slide">
               <div class="image-wrap">
                 <div class="image-info">
@@ -40,6 +56,7 @@
                 <img src="{{asset('home_asset/images/img_4.jpg')}}" alt="Image">
               </div>
             </div>
+			
             <div class="swiper-slide">
               <div class="image-wrap">
                 <div class="image-info">
@@ -49,6 +66,7 @@
                 <img src="{{asset('home_asset/images/img_5.jpg')}}" alt="Image">
               </div>
             </div>
+			
             <div class="swiper-slide">
               <div class="image-wrap">
                 <div class="image-info">
@@ -58,6 +76,7 @@
                 <img src="{{asset('home_asset/images/img_6.jpg')}}" alt="Image">
               </div>
             </div>
+			
             <div class="swiper-slide">
               <div class="image-wrap">
                 <div class="image-info">
@@ -67,6 +86,7 @@
                 <img src="{{asset('home_asset/images/img_7.jpg')}}" alt="Image">
               </div>
             </div>
+			
         </div>
 
         <div class="swiper-pagination"></div>
