@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <title> @yield('title')</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="path/to/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('home_asset/fonts/icomoon/style.css')}}">
+
+    <link rel="stylesheet" href="{{asset('home_asset/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('home_asset/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('home_asset/css/jquery-ui.css')}}">
+    <link rel="stylesheet" href="{{asset('home_asset/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('home_asset/css/owl.theme.default.min.css')}}">
+
+    <link rel="stylesheet" href="{{asset('home_asset/css/lightgallery.min.css')}}">    
+    
+    <link rel="stylesheet" href="{{asset('home_asset/css/bootstrap-datepicker.css')}}">
+
+    <link rel="stylesheet" href="{{asset('home_asset/fonts/flaticon/font/flaticon.css')}}">
+    
+    <link rel="stylesheet" href="{{asset('home_asset/css/swiper.css')}}">
+
+    <link rel="stylesheet" href="{{asset('home_asset/css/aos.css')}}">
+
+    <link rel="stylesheet" href="{{asset('home_asset/css/style.css')}}">
+	<script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+    
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+
+
+
+    <header class="site-navbar py-3" role="banner">
+
+		<div class="container-fluid">
+			<div class="row align-items-center">
+				 <div class="col-6 col-xl-2" data-aos="fade-down">
+					<h1 class="mb-0"><a href="{{route('home.index')}}" class="text-black h2 mb-0">   আয়না</a></h1>
+				 </div>
+				 <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
+					<nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
+
+					  <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+						<li class="active"><a href="{{route('home.index')}}">Home</a></li>
+						<li class="has-children">
+						  <a href="{{route('home.gallary')}}">Gallery</a>
+						  <ul class="dropdown">
+							<li><a href="{{route('home.gallary')}}">Nature</a></li>
+							<li><a href="{{route('home.gallary')}}">Portrait</a></li>
+							<li><a href="{{route('home.gallary')}}">People</a></li>
+							<li><a href="{{route('home.gallary')}}">Architecture</a></li>
+							<li><a href="{{route('home.gallary')}}">Animals</a></li>
+							<li><a href="{{route('home.gallary')}}">Sports</a></li>
+							<li><a href="{{route('home.gallary')}}">Travel</a></li>
+							<li class="has-children">
+							  <a href="{{route('home.gallary')}}">Sub Menu</a>
+							  <ul class="dropdown">
+								<li><a href="{{route('home.gallary')}}">Menu One</a></li>
+								<li><a href="{{route('home.gallary')}}">Menu Two</a></li>
+								<li><a href="{{route('home.gallary')}}">Menu Three</a></li>
+							  </ul>
+							</li>
+						  </ul>
+						</li>
+						<li><a href="services.html">Services</a></li>
+						<li><a href="{{route('home.about')}}">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					  </ul>
+					</nav>
+				 </div>
+				  
+				 <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
+					<div class="d-none d-xl-inline-block">
+					  <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
+						<li>
+						  <a href="/logout" class="pl-0 pr-3"><span class="iconify" data-icon="oi-account-logout" data-inline="false"></span> logout</a>
+						</li>
+						
+					  </ul>
+					</div>
+
+					<div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+				 </div>
+				
+			</div>
+		</div>
+      
+    </header>
+
+	 @yield('content')
+
+  <div class="footer py-4">
+    <div class="container-fluid">
+      <p>
+      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      </p>
+    </div>
+  </div>
+
+    
+	
+    
+    
+  </div>
+
+  <script src="{{asset('home_asset/js/jquery-3.3.1.min.js')}}"></script>
+  <script src="{{asset('home_asset/js/jquery-migrate-3.0.1.min.js')}}"></script>
+  <script src="{{asset('home_asset/js/jquery-ui.js')}}"></script>
+  <script src="{{asset('home_asset/js/popper.min.js')}}"></script>
+  <script src="{{asset('home_asset/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('home_asset/js/owl.carousel.min.js')}}"></script>
+  <script src="{{asset('home_asset/js/jquery.stellar.min.js')}}"></script>
+  <script src="{{asset('home_asset/js/jquery.countdown.min.js')}}"></script>
+  <script src="{{asset('home_asset/js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{asset('home_asset/js/bootstrap-datepicker.min.js')}}"></script>
+  <script src="{{asset('home_asset/js/swiper.min.js')}}"></script>
+  <script src="{{asset('home_asset/js/aos.js')}}"></script>
+  
+
+  <script src="{{asset('home_asset/js/picturefill.min.js')}}"></script>
+  <script src="{{asset('home_asset/js/lightgallery-all.min.js')}}"></script>
+  <script src="{{asset('home_asset/js/jquery.mousewheel.min.js')}}"></script>
+
+  <script src="{{asset('home_asset/js/main.js')}}"></script>
+  
+  <script>
+    $(document).ready(function(){
+      $('#lightgallery').lightGallery();
+    });
+  </script>
+    
+  </body>
+</html>
