@@ -64,29 +64,29 @@
 					  <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
 						<li class="active"><a href="{{route('home.index')}}">Home</a></li>
 						<li class="has-children">
-						  <a href="{{route('home.gallary')}}">Gallery</a>
+						  <a href="{{route('home.vehicle')}}">Gallery</a>
 						  <ul class="dropdown">
 							<li class="has-children">
-								<a href="{{route('home.gallary')}}">Vehicle</a>
+								<a href="{{route('home.vehicle')}}">Vehicle</a>
 								<ul class="dropdown">
-									<li><a href="{{route('home.gallary')}}">Boats</a></li>
-									<li><a href="{{route('home.gallary')}}">Cars</a></li>
-									<li><a href="{{route('home.gallary')}}">Trucks</a></li>
+									<li><a href="{{route('home.gallary', 'boats')}}">Boats</a></li>
+									<li><a href="{{route('home.gallary', 'cars')}}">Cars</a></li>
+									<li><a href="{{route('home.gallary', 'trucks')}}">Trucks</a></li>
 								</ul>
 							</li>
-							<li><a href="{{route('home.gallary')}}">Nature</a></li>
-							<li><a href="{{route('home.gallary')}}">Portrait</a></li>
-							<li><a href="{{route('home.gallary')}}">People</a></li>
-							<li><a href="{{route('home.gallary')}}">Architecture</a></li>
-							<li><a href="{{route('home.gallary')}}">Animals</a></li>
-							<li><a href="{{route('home.gallary')}}">Sports</a></li>
-							<li><a href="{{route('home.gallary')}}">Travel</a></li>
+							<li><a href="{{route('home.gallary', 'nature')}}">Nature</a></li>
+							<li><a href="{{route('home.gallary', 'nature')}}">Portrait</a></li>
+							<li><a href="{{route('home.gallary', 'nature')}}">People</a></li>
+							<li><a href="{{route('home.gallary', 'nature')}}">Architecture</a></li>
+							<li><a href="{{route('home.gallary', 'nature')}}">Animals</a></li>
+							<li><a href="{{route('home.gallary', 'nature')}}">Sports</a></li>
+							<li><a href="{{route('home.gallary', 'nature')}}">Travel</a></li>
 							<li class="has-children">
-							  <a href="{{route('home.gallary')}}">Sub Menu</a>
+							  <a href="{{route('home.gallary', 'nature')}}">Sub Menu</a>
 							  <ul class="dropdown">
-								<li><a href="{{route('home.gallary')}}">Menu One</a></li>
-								<li><a href="{{route('home.gallary')}}">Menu Two</a></li>
-								<li><a href="{{route('home.gallary')}}">Menu Three</a></li>
+								<li><a href="{{route('home.gallary', 'nature')}}">Menu One</a></li>
+								<li><a href="{{route('home.gallary', 'nature')}}">Menu Two</a></li>
+								<li><a href="{{route('home.gallary', 'nature')}}">Menu Three</a></li>
 							  </ul>
 							</li>
 						  </ul>
@@ -129,7 +129,7 @@
 								<a href="{{route('home.index')}}"><i class="fa fa-user" aria-hidden="true"></i> {{Session::get('name')}}</a>
 								<ul class="dropdown">
 									<li> 
-										<a href="{{route('home.upload')}}"> Upload Photo</a>
+										<a href="{{route('image.upload')}}"> Upload Photo</a>
 									</li>
 									
 									<li>

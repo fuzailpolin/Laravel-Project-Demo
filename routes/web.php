@@ -17,25 +17,27 @@ Route::get('/', function () {
 
 Route::get('/login', 'LoginController@index')->name('login');
 Route::post('/login', 'LoginController@verify');
-Route::get('logout', 'LogoutController@index');
+Route::get('/logout', 'LogoutController@index');
 
 
 Route::group(['middleware'=>['sess']], function(){
 	
-	//admin home view
-	
-	Route::get('/adminHome', 'adminController@index')->name('admin.index');
-	
-	//admin Registration
-	
-	Route::get('/registration', 'regController@index')->name('registration.index');
-	
+	Route::group(['middleware'=>['type']], function(){
+		
+		//admin home view
+		Route::get('/adminHome', 'adminController@index')->name('admin.index');
+		
+		//admin Registration
+		Route::get('/registration', 'regController@index')->name('registration.index');
+		Route::post('/registration', 'regController@store')->name('registration.store');
+	});
 	
 	//customer home view
 	Route::get('/home', 'homeController@index')->name('home.index');
-	Route::get('/home/gallary', 'homeController@gallary')->name('home.gallary');
+	Route::get('/home/vehicle', 'homeController@vehicle')->name('home.vehicle');
+	Route::get('/home/gallary/{id}', 'homeController@gallary')->name('home.gallary');
 	Route::get('/home/about', 'homeController@about')->name('home.about');
-	Route::get('/home/upload', 'homeController@pictureUpload')->name('home.upload');
-	
+	Route::get('/home/upload', 'ImageCrudController@index')->name('image.upload');
+	Route::post('/home/upload', 'ImageCrudController@store')->name('image.store');
 	
 });

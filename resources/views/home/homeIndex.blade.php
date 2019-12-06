@@ -11,7 +11,7 @@
               <div class="image-wrap">
                 <div class="image-info">
                   <h2 class="mb-3">Vehicles</h2>
-                  <a href="{{route('home.gallary')}}" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                  <a href="{{route('home.vehicle')}}" class="btn btn-outline-white py-2 px-4">More Photos</a>
                 </div>
                 <img src="{{asset('home_asset/images/img_9.jpg')}}" alt="Image">
               </div>
@@ -21,7 +21,7 @@
               <div class="image-wrap">
                 <div class="image-info">
                   <h2 class="mb-3">Nature</h2>
-                  <a href="{{route('home.gallary')}}" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                  <a href="{{route('home.gallary', 'nature')}}" class="btn btn-outline-white py-2 px-4">More Photos</a>
                 </div>
                 <img src="{{asset('home_asset/images/img_1.jpg')}}" alt="Image">
               </div>

@@ -58,33 +58,12 @@
 	</head>
 	<body>
 		<div class="container">
+			@foreach($images as $img)
 			<div class="tile">
-				<img src="{{asset('home_asset/images/nature_small_1.jpg')}}">
+				<img src="{{asset('upload/' . $img->image)}}">
 			</div>
-			<div class="tile">
-				<img src="{{asset('home_asset/images/nature_small_2.jpg')}}">
-			</div>
-			<div class="tile">
-				<img src="{{asset('home_asset/images/nature_small_3.jpg')}}">
-			</div>
-			<div class="tile">
-				<img src="{{asset('home_asset/images/nature_small_4.jpg')}}">
-			</div>
-			<div class="tile">
-				<img src="{{asset('home_asset/images/nature_small_5.jpg')}}">
-			</div>
-			<div class="tile">
-				<img src="{{asset('home_asset/images/nature_small_6.jpg')}}">
-			</div>
-			<div class="tile">
-				<img src="{{asset('home_asset/images/nature_small_7.jpg')}}">
-			</div>
-			<div class="tile">
-				<img src="{{asset('home_asset/images/nature_small_8.jpg')}}">
-			</div>
-			<div class="tile">
-				<img src="{{asset('home_asset/images/nature_small_9.jpg')}}">
-			</div>
+			@endforeach
+
 		</div>
 	</body>
 @endsection
