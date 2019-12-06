@@ -35,7 +35,7 @@
 							</li>
 							
 							<li>
-								<a href="#">Register</a>
+								<a href="{{route('registration.index')}}">Register</a>
 							</li>
 							
 						</ul>

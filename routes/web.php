@@ -26,6 +26,10 @@ Route::group(['middleware'=>['sess']], function(){
 	
 	Route::get('/adminHome', 'adminController@index')->name('admin.index');
 	
+	//admin Registration
+	
+	Route::get('/registration', 'regController@index')->name('registration.index');
+	
 	
 	//customer home view
 	Route::get('/home', 'homeController@index')->name('home.index');

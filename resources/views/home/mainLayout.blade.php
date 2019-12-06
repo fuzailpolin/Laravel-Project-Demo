@@ -6,8 +6,10 @@
     <title> @yield('title')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400,700" rel="stylesheet">
 
-    <link href="path/to/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="{{asset('home_asset/fonts/icomoon/style.css')}}">
 
     <link rel="stylesheet" href="{{asset('home_asset/css/bootstrap.min.css')}}">
@@ -27,10 +29,10 @@
     <link rel="stylesheet" href="{{asset('home_asset/css/aos.css')}}">
 
     <link rel="stylesheet" href="{{asset('home_asset/css/style.css')}}">
-	<link rel="stylesheet" href="{{asset('home_asset/css/fileupload.css')}}">
+	
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+	
     
   </head>
   <body>
@@ -104,12 +106,21 @@
 							<li class="has-children">
 								<a href="{{route('admin.index')}}"><i class="fa fa-user" aria-hidden="true"></i> {{Session::get('name')}}</a>
 								<ul class="dropdown">
-									<li> 
-										<a href="#"> Change Layout </a>
+									<li class="has-children"> 
+										<a href=""> Choose Layout </a>
+										<ul class="dropdown">
+											<li> 
+												<a href="#"> Standard</a>
+											</li>
+											
+											<li>
+												<a href="#"> Mosaic</a>
+											</li>
+										</ul>
 									</li>
 									
 									<li>
-										<a href="#">Register</a>
+										<a href="{{route('registration.index')}}">Register</a>
 									</li>
 								</ul>
 							</li>
@@ -165,7 +176,7 @@
     
     
   </div>
-
+	<script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
   <script src="{{asset('home_asset/js/jquery-3.3.1.min.js')}}"></script>
   <script src="{{asset('home_asset/js/jquery-migrate-3.0.1.min.js')}}"></script>
   <script src="{{asset('home_asset/js/jquery-ui.js')}}"></script>

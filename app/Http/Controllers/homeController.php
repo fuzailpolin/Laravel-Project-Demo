@@ -20,5 +20,16 @@ class homeController extends Controller
 	}
 	public function pictureUpload(){
 		return view('home.pictureUpload');
+		//return view('registration.regIndex');
+	}
+	public function fileinsert(Request $req){
+		if($req->hasFile('picture')){
+            $file = $req->file('picture');
+			if($file->move('upload', $file->getClientOriginalName())){
+				return view('home.pictureUpload');
+			}
+        }else{
+            echo "upload fail";
+        }
 	}
 }
