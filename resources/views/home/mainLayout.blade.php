@@ -75,12 +75,12 @@
 								</ul>
 							</li>
 							<li><a href="{{route('home.gallary', 'nature')}}">Nature</a></li>
-							<li><a href="{{route('home.gallary', 'nature')}}">Portrait</a></li>
-							<li><a href="{{route('home.gallary', 'nature')}}">People</a></li>
-							<li><a href="{{route('home.gallary', 'nature')}}">Architecture</a></li>
-							<li><a href="{{route('home.gallary', 'nature')}}">Animals</a></li>
-							<li><a href="{{route('home.gallary', 'nature')}}">Sports</a></li>
-							<li><a href="{{route('home.gallary', 'nature')}}">Travel</a></li>
+							<li><a href="{{route('home.gallary', 'portrait')}}">Portrait</a></li>
+							<li><a href="{{route('home.gallary', 'people')}}">People</a></li>
+							<li><a href="{{route('home.gallary', 'architecture')}}">Architecture</a></li>
+							<li><a href="{{route('home.gallary', 'animal')}}">Animals</a></li>
+							<li><a href="{{route('home.gallary', 'sports')}}">Sports</a></li>
+							<li><a href="{{route('home.gallary', 'travel')}}">Travel</a></li>
 							<li class="has-children">
 							  <a href="{{route('home.gallary', 'nature')}}">Sub Menu</a>
 							  <ul class="dropdown">
@@ -91,9 +91,9 @@
 							</li>
 						  </ul>
 						</li>
-						<li><a href="services.html">Services</a></li>
+						<li><a href="#">Services</a></li>
 						<li><a href="{{route('home.about')}}">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="#">Contact</a></li>
 					  </ul>
 					</nav>
 				 </div>
@@ -145,9 +145,9 @@
 									<li> 
 										<a href="{{route('image.upload')}}"> Upload Photo</a>
 									</li>
-									<li>
+									<!--<li>
 										<a href="{{route('imgMan.index', 'image')}}">Edit Image</a>
-									</li>
+									</li>-->
 									
 									<li>
 										<a href="#">Other Option</a>

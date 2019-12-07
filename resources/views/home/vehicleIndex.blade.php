@@ -31,7 +31,7 @@
               <div class="image-wrap">
                 <div class="image-info">
                   <h2 class="mb-3">Trucks</h2>
-                  <a href="#" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                  <a href="{{route('home.gallary', 'trucks')}}" class="btn btn-outline-white py-2 px-4">More Photos</a>
                 </div>
                 <img src="{{asset('home_asset/images/img_12.jpg')}}" alt="Image">
               </div>

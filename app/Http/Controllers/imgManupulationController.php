@@ -8,12 +8,21 @@ use Image;
 class imgManupulationController extends Controller
 {
     public function index($img){
-		return view('image.imgManupulation');
+		return view('image.imgManupulation')->with('img', $img);
 	}
 	
 	public function editImg(Request $req, $img){
-            $file = Image::make('home_asset/images/img_11.jpg');
+		
+			//{{asset('upload/' . $img->image)}}
+			//return $img;
+            $file = Image::make('upload/'.$img);
 			//$filename= $file->getClientOriginalName();
-			echo $file;
+			if($req->button == 'rotate Right')$file->rotate(-90);
+			else if($req->button == 'rotate Left')$file->rotate(90);
+			
+			
+			$file->save('upload/'. $img);
+			
+			return redirect()->route('imgMan.index', $img);
 	}
 }

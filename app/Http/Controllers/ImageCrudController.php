@@ -61,7 +61,8 @@ class ImageCrudController extends Controller
         }
 		
 		if($timage->save()){
-            return redirect()->route('home.index');
+            //return redirect()->route('home.index');
+			return back();
         }else{
             //return redirect()->route('student.add');
 			echo "Image store failed!";

@@ -60,7 +60,9 @@
 		<div class="container">
 			@foreach($images as $img)
 			<div class="tile">
-				<img src="{{asset('upload/' . $img->image)}}">
+				<div>
+					<a href="{{route('imgMan.index', $img->image)}}"><img src="{{asset('upload/' . $img->image)}}" alt="IMage" class="img-fluid"></a>
+				</div>
 			</div>
 			@endforeach
 

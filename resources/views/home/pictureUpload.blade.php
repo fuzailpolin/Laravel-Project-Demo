@@ -24,10 +24,12 @@
 										<option value="cars">Cars</option>
 										<option value="trucks">Trucks</option>
 										<option value="nature">Nature</option>
-										<option value="potrait">Potrait</option>
-										<option value="prople">People</option>
+										<option value="portrait">Potrait</option>
+										<option value="people">People</option>
 										<option value="architecture">Architecture</option>
 										<option value="sports">sports</option>
+										<option value="animal">Animals</option>
+										<option value="travel">Travel</option>
 									 </select>
 								</div>
 							</td>

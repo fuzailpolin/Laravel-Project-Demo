@@ -1,21 +1,20 @@
-<!DOCTYPE html>
+@extends('home.mainLayout')
+@section('content')
 
-<html>
-	<head>
-	</head>
-	<body>
 		
-		<div>
+		<div align="center">
 			<form method="post" enctype="multipart/form-data">
-				<img src="{{asset('home_asset/images/img_11.jpg')}}" alt="Image" name="tempImage">
+				<img src="{{asset('upload/'. $img)}}" alt="Image" name="tempImage">
+				<br/><br/>
+				<input type="submit" name="button" value="rotate Left">
 				
-				<input type="submit" name="rotateLeft" value="rotate Left">
+				<input type="submit" name="button" value="rotate Right">
 				
-				<input type="submit" name="rotateRight" value="rotate Right">
-				
-				<input type="submit" name="fileSubmit" value="Save">
 			</form>
 		</div>
 		
-	</body>
-</html>
+@endsection
+
+@section('title')
+	Edit Image
+@endsection

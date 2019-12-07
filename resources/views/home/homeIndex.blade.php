@@ -31,7 +31,7 @@
               <div class="image-wrap">
                 <div class="image-info">
                   <h2 class="mb-3">Portrait</h2>
-                  <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                  <a href="{{route('home.gallary', 'portrait')}}" class="btn btn-outline-white py-2 px-4">More Photos</a>
                 </div>
                 <img src="{{asset('home_asset/images/img_2.jpg')}}" alt="Image">
               </div>
@@ -41,7 +41,7 @@
               <div class="image-wrap">
                 <div class="image-info">
                   <h2 class="mb-3">People</h2>
-                  <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                  <a href="{{route('home.gallary', 'people')}}" class="btn btn-outline-white py-2 px-4">More Photos</a>
                 </div>
                 <img src="{{asset('home_asset/images/img_3.jpg')}}" alt="Image">
               </div>
@@ -51,7 +51,7 @@
               <div class="image-wrap">
                 <div class="image-info">
                   <h2 class="mb-3">Architecture</h2>
-                  <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                  <a href="{{route('home.gallary', 'architecture')}}" class="btn btn-outline-white py-2 px-4">More Photos</a>
                 </div>
                 <img src="{{asset('home_asset/images/img_4.jpg')}}" alt="Image">
               </div>
@@ -61,7 +61,7 @@
               <div class="image-wrap">
                 <div class="image-info">
                   <h2 class="mb-3">Animals</h2>
-                  <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                  <a href="{{route('home.gallary', 'animal')}}" class="btn btn-outline-white py-2 px-4">More Photos</a>
                 </div>
                 <img src="{{asset('home_asset/images/img_5.jpg')}}" alt="Image">
               </div>
@@ -71,7 +71,7 @@
               <div class="image-wrap">
                 <div class="image-info">
                   <h2 class="mb-3">Sports</h2>
-                  <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                  <a href="{{route('home.gallary', 'sports')}}" class="btn btn-outline-white py-2 px-4">More Photos</a>
                 </div>
                 <img src="{{asset('home_asset/images/img_6.jpg')}}" alt="Image">
               </div>
@@ -81,7 +81,7 @@
               <div class="image-wrap">
                 <div class="image-info">
                   <h2 class="mb-3">Travel</h2>
-                  <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                  <a href="{{route('home.gallary', 'travel')}}" class="btn btn-outline-white py-2 px-4">More Photos</a>
                 </div>
                 <img src="{{asset('home_asset/images/img_7.jpg')}}" alt="Image">
               </div>
