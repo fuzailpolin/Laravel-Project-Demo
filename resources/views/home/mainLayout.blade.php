@@ -106,21 +106,23 @@
 							<li class="has-children">
 								<a href="{{route('admin.index')}}"><i class="fa fa-user" aria-hidden="true"></i> {{Session::get('name')}}</a>
 								<ul class="dropdown">
-									<li class="has-children"> 
+								<li class="has-children"> 
 										<a href=""> Choose Layout </a>
 										<ul class="dropdown">
 											<li> 
-												<a href="#"> Standard</a>
+												<a href="{{route('layout.index', 'standard')}}"> Standard</a>
 											</li>
 											
 											<li>
-												<a href="#"> Mosaic</a>
+												<a href="{{route('layout.index', 'mosaic')}}"> Mosaic</a>
 											</li>
 										</ul>
 									</li>
-									
 									<li>
 										<a href="{{route('registration.index')}}">Register</a>
+									</li>
+									<li>
+										<a href="{{route('imgMan.index', 'image')}}">Edit Image</a>
 									</li>
 								</ul>
 							</li>
@@ -128,8 +130,23 @@
 							<li class="has-children">
 								<a href="{{route('home.index')}}"><i class="fa fa-user" aria-hidden="true"></i> {{Session::get('name')}}</a>
 								<ul class="dropdown">
+									<li class="has-children"> 
+										<a href=""> Choose Layout </a>
+										<ul class="dropdown">
+											<li> 
+												<a href="{{route('layout.index', 'standard')}}"> Standard</a>
+											</li>
+											
+											<li>
+												<a href="{{route('layout.index', 'mosaic')}}"> Mosaic</a>
+											</li>
+										</ul>
+									</li>
 									<li> 
 										<a href="{{route('image.upload')}}"> Upload Photo</a>
+									</li>
+									<li>
+										<a href="{{route('imgMan.index', 'image')}}">Edit Image</a>
 									</li>
 									
 									<li>

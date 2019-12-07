@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\layoutModel;
 use Illuminate\Support\Facades\DB;
 
 class regController extends Controller
@@ -18,6 +19,15 @@ class regController extends Controller
         $user->password = $req->password;
         //$user->name = $req->username;
         $user->type = "customer";
+		
+		//setlayout
+		
+		$layout = new layoutModel();
+		$layout->username = $req->username;
+        $layout->layout = 'standard';
+		$layout->save();
+		
+		//save user
         if($user->save()){
             return redirect()->route('home.index');
         }else{

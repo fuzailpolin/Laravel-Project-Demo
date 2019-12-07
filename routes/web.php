@@ -40,4 +40,8 @@ Route::group(['middleware'=>['sess']], function(){
 	Route::get('/home/upload', 'ImageCrudController@index')->name('image.upload');
 	Route::post('/home/upload', 'ImageCrudController@store')->name('image.store');
 	
+	Route::get('/home/edit/{img}', 'imgManupulationController@index')->name('imgMan.index');
+	Route::post('/home/edit/{img}', 'imgManupulationController@editImg');
+	
+	Route::get('/home/layout/{lay}', 'LayoutModelController@index')->name('layout.index');
 });
