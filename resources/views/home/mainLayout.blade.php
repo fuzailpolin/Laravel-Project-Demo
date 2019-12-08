@@ -91,7 +91,7 @@
 							</li>
 						  </ul>
 						</li>
-						<li><a href="#">Services</a></li>
+						<li><a href="{{route('image.upload')}}"> Upload Photo</a></li>
 						<li><a href="{{route('home.about')}}">About</a></li>
 						<li><a href="#">Contact</a></li>
 					  </ul>
@@ -121,9 +121,7 @@
 									<li>
 										<a href="{{route('registration.index')}}">Register</a>
 									</li>
-									<li>
-										<a href="{{route('imgMan.index', 'image')}}">Edit Image</a>
-									</li>
+									
 								</ul>
 							</li>
 						@else
@@ -148,6 +146,8 @@
 									<!--<li>
 										<a href="{{route('imgMan.index', 'image')}}">Edit Image</a>
 									</li>-->
+									
+						
 									
 									<li>
 										<a href="#">Other Option</a>

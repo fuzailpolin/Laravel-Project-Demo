@@ -44,4 +44,7 @@ Route::group(['middleware'=>['sess']], function(){
 	Route::post('/home/edit/{img}', 'imgManupulationController@editImg');
 	
 	Route::get('/home/layout/{lay}', 'LayoutModelController@index')->name('layout.index');
+	
+	Route::get('/home/crop/{img}', 'imgManupulationController@crop')->name('imgMan.crop');
+	Route::post('/home/crop/{img}', 'imgManupulationController@cropImage');
 });

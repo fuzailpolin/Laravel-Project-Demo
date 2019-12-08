@@ -20,9 +20,20 @@ class imgManupulationController extends Controller
 			if($req->button == 'rotate Right')$file->rotate(-90);
 			else if($req->button == 'rotate Left')$file->rotate(90);
 			
-			
 			$file->save('upload/'. $img);
 			
 			return redirect()->route('imgMan.index', $img);
+	}
+	public function crop($img){
+		return view('image.cropIndex')->with('img', $img);
+	}
+	
+	public function cropImage(Request $req, $img){
+		$width = (int)$req->width;
+		$height = (int)$req->height;
+		$file = Image::make('upload/'.$img);
+		$file->crop($width, $height);
+		$file->save('upload/'. $img);
+		return back();
 	}
 }

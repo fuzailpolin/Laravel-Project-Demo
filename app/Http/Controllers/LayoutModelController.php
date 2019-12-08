@@ -22,7 +22,8 @@ class LayoutModelController extends Controller
 		DB::table('layout')
             ->where('username', $req->session()->get('name'))
             ->update(['layout' => $lay]);
-		return redirect()->route('home.index');
+		//return redirect()->route('home.index');
+		return back();
     }
 
     /**

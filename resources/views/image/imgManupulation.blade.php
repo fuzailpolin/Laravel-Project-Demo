@@ -10,6 +10,8 @@
 				
 				<input type="submit" name="button" value="rotate Right">
 				
+				<a href="{{route('imgMan.crop', $img)}}"> <input type="button" name="save" value="crop"> </a>
+				
 			</form>
 		</div>
 		
