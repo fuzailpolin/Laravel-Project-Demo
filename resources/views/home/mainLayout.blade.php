@@ -91,7 +91,7 @@
 							</li>
 						  </ul>
 						</li>
-						<li><a href="{{route('image.upload')}}"> Upload Photo</a></li>
+						
 						<li><a href="{{route('home.about')}}">About</a></li>
 						<li><a href="#">Contact</a></li>
 					  </ul>
@@ -102,7 +102,7 @@
 				<nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 					<div class="d-none d-xl-inline-block">
 					  <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
-						@if (Session::get('user')->type == 'admin')
+						@if (Session::get('user') == 'admin')
 							<li class="has-children">
 								<a href="{{route('admin.index')}}"><i class="fa fa-user" aria-hidden="true"></i> {{Session::get('name')}}</a>
 								<ul class="dropdown">
@@ -124,7 +124,10 @@
 									
 								</ul>
 							</li>
-						@else
+							<li>
+								<a href="/logout" class="pl-0 pr-3"><span class="iconify" data-icon="oi-account-logout" data-inline="false"></span> logout</a>
+							</li>
+						@elseif (Session::get('user') == 'customer')
 							<li class="has-children">
 								<a href="{{route('home.index')}}"><i class="fa fa-user" aria-hidden="true"></i> {{Session::get('name')}}</a>
 								<ul class="dropdown">
@@ -154,10 +157,11 @@
 									</li>
 								</ul>
 							</li>
+							<li>
+								<a href="/logout" class="pl-0 pr-3"><span class="iconify" data-icon="oi-account-logout" data-inline="false"></span> logout</a>
+							</li>
 						@endif
-						<li>
-						  <a href="/logout" class="pl-0 pr-3"><span class="iconify" data-icon="oi-account-logout" data-inline="false"></span> logout</a>
-						</li>
+						
 						
 						
 						

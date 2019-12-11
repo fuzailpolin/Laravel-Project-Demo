@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\imageCrud;
 use Illuminate\Support\Facades\DB;
 use App\layoutModel;
+use App\User;
 
 class homeController extends Controller
 {
@@ -18,7 +19,7 @@ class homeController extends Controller
 		$images = imageCrud::where('username', $req->session()->get('name'))
 					->where('image_type', $id)
 					->get();
-		//return $images;
+		//return $req->session()->get('name');
 		if(count($images) > 0){
 			
 			$lay = layoutModel::where('username', $req->session()->get('name'))
@@ -45,18 +46,20 @@ class homeController extends Controller
 	public function about(){
 		return view('home.about');
 	}
-	/* public function pictureUpload(){
-		return view('home.pictureUpload');
-		//return view('registration.regIndex');
-	} */
-	/* public function fileinsert(Request $req){
-		if($req->hasFile('picture')){
-            $file = $req->file('picture');
-			if($file->move('upload', $file->getClientOriginalName())){
-				return view('home.pictureUpload');
-			}
-        }else{
-            echo "upload fail";
-        }
-	} */
+	
+	public function guestView(Request $req, $username){
+		$user = User::where('username', $username)
+					->first();
+					
+		if(count($user) > 0 ){
+	
+			$req->session()->put('name', $username);
+			$req->session()->put('user', 'guest');
+			//echo "login Done";
+			
+			return view('home.homeIndex');
+			
+		}
+	}
+	
 }

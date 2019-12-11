@@ -20,7 +20,7 @@ class LoginController extends Controller
 		if(count($user) > 0 ){
 	
 			$req->session()->put('name', $req->input('username'));
-			$req->session()->put('user', $user);
+			$req->session()->put('user', $user->type);
 			//echo "login Done";
 			
 			return redirect()->route('home.index');

@@ -11,10 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'landingPageController@index')->name('landing.index');
+Route::get('/photoview/{img}', 'landingPageController@imageView')->name('landing.imgView');
+Route::get('/landingGallary/{type}', 'landingPageController@imgType')->name('gallary.type');
 
+//guest 
+Route::get('/guesthome/{user}', 'homeController@guestView')->name('home.guest');
+Route::get('/home/vehicle', 'homeController@vehicle')->name('home.vehicle');
+Route::get('/home/gallary/{id}', 'homeController@gallary')->name('home.gallary');
+Route::get('/home/about', 'homeController@about')->name('home.about');
+
+//user
 Route::get('/login', 'LoginController@index')->name('login');
 Route::post('/login', 'LoginController@verify');
 Route::get('/logout', 'LogoutController@index');
@@ -34,9 +41,9 @@ Route::group(['middleware'=>['sess']], function(){
 	
 	//customer home view
 	Route::get('/home', 'homeController@index')->name('home.index');
-	Route::get('/home/vehicle', 'homeController@vehicle')->name('home.vehicle');
-	Route::get('/home/gallary/{id}', 'homeController@gallary')->name('home.gallary');
-	Route::get('/home/about', 'homeController@about')->name('home.about');
+	/* Route::get('/home/vehicle', 'homeController@vehicle')->name('home.vehicle');
+	Route::get('/home/gallary/{id}', 'homeController@gallary')->name('home.gallary'); */
+	//Route::get('/home/about', 'homeController@about')->name('home.about');
 	Route::get('/home/upload', 'ImageCrudController@index')->name('image.upload');
 	Route::post('/home/upload', 'ImageCrudController@store')->name('image.store');
 	
@@ -47,4 +54,6 @@ Route::group(['middleware'=>['sess']], function(){
 	
 	Route::get('/home/crop/{img}', 'imgManupulationController@crop')->name('imgMan.crop');
 	Route::post('/home/crop/{img}', 'imgManupulationController@cropImage');
+	
+	
 });
